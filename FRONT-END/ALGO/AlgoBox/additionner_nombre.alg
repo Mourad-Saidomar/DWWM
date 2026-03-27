@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Algo>
+    <description courant="resultat PREND_LA_VALEUR a+b" texte=""/>
+    <extension extnom="inactif"/>
+    <fonction fctetat="inactif" fctcode=""/>
+    <F2 F2etat="inactif" F2defaut="" F2para="" F2lignes=""/>
+    <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
+    <param epaisseurLigne="2" maxBoucle="500000" epaisseurPoint="2" nbDecimales="8" totalBoucles="5000000" totalAffichages="1000" arrondiAuto="vrai"/>
+    <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
+    <item code="100#declarationsvariables" algoitem="VARIABLES">
+        <item code="1#NOMBRE#a" algoitem="a EST_DU_TYPE NOMBRE"/>
+        <item code="1#NOMBRE#b" algoitem="b EST_DU_TYPE NOMBRE"/>
+        <item code="1#NOMBRE#resultat" algoitem="resultat EST_DU_TYPE NOMBRE"/>
+    </item>
+    <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
+        <item code="2#a#pasliste" algoitem="LIRE a"/>
+        <item code="2#b#pasliste" algoitem="LIRE b"/>
+        <item code="5#resultat#a+b#pasliste" algoitem="resultat PREND_LA_VALEUR a+b"/>
+        <item code="4#Resultat : #0" algoitem="AFFICHER &quot;Resultat : &quot;"/>
+        <item code="3#resultat#0#pasliste" algoitem="AFFICHER resultat"/>
+    </item>
+    <item code="102#finalgo" algoitem="FIN_ALGORITHME"/>
+</Algo>
