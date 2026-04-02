@@ -16,11 +16,15 @@ header p{
     font-size: 2rem;
 }
 
-.flexbox{
+.floatContainer, .flexbox, .gridContainer, .absolute{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     margin: 1%;
     padding: 3%;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.flexbox{
+    margin: 1%;
+    padding: 3%;
     align-items: center;
     display: flex;
     justify-content:space-around;
@@ -38,8 +42,6 @@ section{
 .gridContainer{
     margin: 1%;
     padding: 1.5%;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
     display: grid;
     grid-template-columns: 30% 70%;
     place-items: center;
@@ -54,13 +56,12 @@ section{
 
 .gridContainer blockquote{
     text-align: justify;
-}
+}   
 
 .absolute{
     min-height: 300px;
-    border: 2px solid black;
-    border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    position:   relative;
+    
 }
 
 #circle1{
@@ -79,8 +80,48 @@ section{
     height: 80px;
     border-radius: 150px;
     background: rgb(189, 0, 164);
-    top: 0;
+    bottom: 0;
     right: 0;
 }
 
-  
+
+.floatContainer img{
+    width: 15%;
+}  
+
+#img1{
+    border-radius: 20px 5px 5px 20px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+
+#img2{
+    border-radius: 5px 20px 20px 5px;
+    float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+}
+
+
+.floatContainer blockquote{
+    text-align: justify;
+} 
+
+footer{
+    margin-top: 10%;
+    background: rgb(0, 0, 129);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+

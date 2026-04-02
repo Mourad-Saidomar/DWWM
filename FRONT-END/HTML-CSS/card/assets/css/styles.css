@@ -1,0 +1,49 @@
+body{
+    background: linear-gradient(90deg, rgb(33, 137, 255),rgb(4, 0, 255));
+    margin: 0;
+}
+
+#Card{
+      
+    align-items: center;
+    justify-content: center;
+    display: flex
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(41, 0, 155);
+    color: white;
+    margin-bottom: 20px;
+}
+
+#idCard{
+    min-height: 200px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+
+}
+
+.CardContent {
+    background-color: rgb(87, 188, 255);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 60%;
+}
+
+.CardContent h3{
+    color: rgb(0, 51, 218);
+} 
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
