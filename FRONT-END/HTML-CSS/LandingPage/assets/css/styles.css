@@ -6,7 +6,8 @@ body{
 header{
     align-items: center;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
+    padding: 0px 100px 0px 100px;
 }
 
 header h1{
@@ -85,14 +86,29 @@ a:hover{
 
 }
 
-.box{
+.card{
     max-width: 25%;
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    box-shadow: 2px 2px 20px rgb(0, 0, 0);
 }
 
-.box h2{
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card .card-text{
+    padding: 0px 20px 20px 20px;
+}
+
+
+.card h2{
     color: rgb(0, 0, 145);
 }
 
