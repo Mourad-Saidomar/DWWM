@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\chemin\vers\ton\projet"
+cd /d "C:\Users\AloeVERA\OneDrive - ALOMAYJOB\DWWM\MOURAD"
 
 :: Récup date/heure format FR
 for /f %%a in ('powershell -command "Get-Date -Format HH:mm"') do set HOUR=%%a
