@@ -1,0 +1,78 @@
+$primary-color: #037a34;
+$primary-button-hover: #27ae60;
+
+$secondary-color: rgb(0, 0, 104);
+$secondary-button-hover: rgb(11, 14, 216);
+
+$thirdly-color: #b40202;
+$thirdly-button-hover: rgb(230, 17, 6);
+
+$nombre : 20px;
+
+body{
+    margin: 0;
+}
+
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: $nombre;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        margin: 0;
+    }
+    nav{
+        ul{
+            display: flex;
+            gap: $nombre;
+            list-style: none;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@mixin card-style($color, $button-hover){
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    color: $color;
+    border: 1px solid $color;
+    button{
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: $color;
+        &:hover{
+            background-color: $button-hover;
+        }
+    }
+    h2{
+        margin-top: 0;
+    }
+
+    
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    padding: 20px; 
+    .card1{
+        @include card-style($primary-color, $primary-button-hover);
+
+    }
+    .card2{
+        @include card-style($secondary-color, $secondary-button-hover);
+
+    }
+    .card3{
+        @include card-style($thirdly-color, $thirdly-button-hover);
+
+    }
+}
