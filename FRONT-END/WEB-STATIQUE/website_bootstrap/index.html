@@ -8,33 +8,78 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Tableau de Bord</title>
 </head>
-<body class="bg-light">
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container">
 
-      <a class="navbar-brand" href="#">MonSite</a>
+      <a class="navbar-brand text-dark fw-bold fs-2" href="#">MonSite</a>
 
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarContent">
-
+      <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
 
       <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto">
-
+        <ul class="navbar-nav ms-auto d-none d-lg-flex">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Accueil</a>
+            <a class="nav-link text-dark" href="#">Accueil</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link text-dark" href="#">Services</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link text-dark" href="#">A propos</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Contact</a>
+          </li>
+
+          <a href="#" class="btn btn-primary ms-5">Connexion</a>
+          
+        </ul>
+
+        <ul class="navbar-nav ms-auto d-lg-none d-md-flex d-sm-none my-4 p-4">
+
+          <li class="nav-item border-bottom">
+            <a class="nav-link text-dark" href="#">Accueil</a>
+          </li>
+
+          <li class="nav-item border-bottom">
+            <a class="nav-link text-dark" href="#">Services</a>
+          </li>
+
+          <li class="nav-item border-bottom">
+            <a class="nav-link text-dark" href="#">A propos</a>
+          </li>
+
+          <li class="nav-item border-bottom"> 
+            <a class="nav-link text-dark" href="#">Contact</a>
+          </li>
+          <a href="#" class="btn btn-primary me-auto mt-4">Connexion</a>
+
+        </ul>
+        
+        <ul class="navbar-nav ms-auto d-lg-none d-md-none border rounded my-4 p-4">
+
+          <li class="nav-item border-bottom">
+            <a class="nav-link  text-dark" href="#">Accueil</a>
+          </li>
+
+          <li class="nav-item border-bottom">
+            <a class="nav-link  text-dark" href="#">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link  text-dark border-bottom" href="#">A propos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-dark border-bottom" href="#">Contact</a>
+          </li>
+          <a href="#" class="btn btn-primary me-auto mt-4">Connexion</a>
 
         </ul>
       </div>
