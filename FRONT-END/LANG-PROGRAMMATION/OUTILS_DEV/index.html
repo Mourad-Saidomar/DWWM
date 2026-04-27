@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP DevTools</title>
+</head>
+<body>
+
+    <h1 id="titre">Bienvenue</h1>
+
+    <p id="texte">Clique sur le bouton</p>
+
+    <button id="btn">Clique ici</button>
+
+    <ul id="liste">
+        <li>Item 1</li>
+    </ul>
+
+    <script>
+        let bouton = document.getElementById("btn");
+
+        bouton.addEventListener("click", function() {
+            let liste = document.getElementById("liste");
+            liste.innerHTML += "<li>Nouvel élément</li>";
+        });
+    </script>
+
+</body>
+</html>
