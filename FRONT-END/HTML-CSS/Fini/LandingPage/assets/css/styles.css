@@ -1,0 +1,229 @@
+body{
+    margin: 0;
+}
+
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+    padding: 0px 100px 0px 100px;
+}
+
+header h1{
+    color: rgb(17, 0, 255);
+    font-weight: bold;
+
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+a:hover{
+    color: rgb(171, 206, 241);
+}
+
+
+#hero{
+    display: flex;
+    padding: 3% 0% 3% 3%;
+    background-color: rgba(143, 223, 255, 0.5);
+    justify-content: center;
+    align-items: center;    
+    transition: all 0.3s ease-in-out;
+}
+
+#hero:hover{
+    transform: scale(1.0);
+    transition: 0.5s;
+
+}
+
+
+#hero .text{
+    display: grid;
+    justify-content: center;
+}
+
+
+
+.btn-inscription, .btn-hero{
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+}
+.btn-hero{
+    max-width: 20%;
+    background-color: rgb(0, 122, 255);
+    color: white;
+    text-align: center;
+}
+
+
+
+
+.hero-img{
+    background: url(/assets/img/image-2.webp) no-repeat center center/cover;
+    min-width: 30vw ;
+    min-height: 50vh;
+    width: 100%;
+    border-radius: 20px 0px 0px 20px;
+    margin-left: 5%;
+}
+
+#avantages{
+    background-color: rgb(243, 243, 243);
+    padding: 20px 100px 50px 100px;
+    
+}   
+
+#avantages h1{
+    text-align: center;
+    justify-content: center;
+}
+
+.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+
+}
+
+.card{
+    width: 25%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    min-height: 350px;
+
+}
+
+.card:hover{
+    transform: scale(1.0);
+    transition: 0.5s;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card .card-text{
+    padding: 0px 20px 20px 20px;
+}
+
+
+.card h2{
+    color: rgb(0, 0, 145);
+}
+
+#temoignage, #inscription{
+    text-align: center;
+    padding: 20px;
+}
+
+#inscription{
+    background-color: rgba(143, 223, 255, 0.5);
+    padding-bottom: 50px;
+
+}
+
+#inscription p{
+    margin-bottom: 50px;
+}
+
+.btn-inscription{
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+footer{
+    background-color: rgb(32, 32, 32);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 1024px){
+
+    .flexbox{
+        flex-wrap: wrap;
+
+    }
+    
+    .card{
+        margin: 20px;
+        width: 50%;
+        max-width: 40%;                
+    }
+
+}
+
+
+@media (max-width: 748px){
+    header{
+        align-items: center;
+        justify-content:space-around;
+        padding: 20px;
+    }
+
+    nav{
+        display: grid;
+        
+    }
+
+    a{
+        text-align: center
+    }
+
+    #hero{
+        padding: 20px;
+        display: grid;
+        padding: 20px;
+        background: none;
+        justify-content: center;
+        align-items: center; 
+
+    }
+
+    #hero .text{
+        text-align: center;
+        justify-content: center;
+        border-radius: 20px 20px 0px 0px;
+        padding: 20px;
+        display: grid;
+        background-color: rgba(143, 223, 255, 0.5);
+    }
+
+    .btn-hero{
+        margin: auto;
+    }
+
+    .hero-img{
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 0 0 20px 20px;
+        margin-left: 0;
+    }
+
+    .card{
+        width: 100%;
+        margin: 20px;
+        max-width: 75%;                
+    }
+
+
+}
+
+
+

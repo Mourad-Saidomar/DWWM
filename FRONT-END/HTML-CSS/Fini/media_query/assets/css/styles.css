@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(34, 33, 33);
+    color: blueviolet;
+    margin: 0;
+ }
+p{
+    font-size: 20px;
+}
+
+.barre{
+    background-color: rgb(163, 1, 1);
+    min-height: 100vh;
+    width: 25vw;
+}
+
+
+
+
+
+
+@media (max-width: 1024px){
+    body{
+        background-color: rgb(2, 80, 2);
+        
+    }
+    p{
+        font-size: 15px;
+    }   
+
+    .barre{
+    background-color: rgb(10, 53, 134);
+    min-height: 100vh;
+    width: 25vw;
+}
+}
+
+
+@media (max-width: 600px){
+    body{
+        background-color: rgb(60, 0, 128);
+    }
+
+    p{
+        font-size: 10px;
+    }
+    .barre{
+        display: none;
+    }
+}
+
+
+
