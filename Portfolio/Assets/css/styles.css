@@ -1,8 +1,8 @@
-/* ====== POLICE + RESET DE BASE ====== */
+﻿/* ====== POLICE + RESET DE BASE ====== */
 html {
-  font-family: Arial, sans-serif; /* police par défaut du site */
-  margin: 0; /* enlève marge automatique du navigateur */
-  padding: 0; /* enlève padding automatique */
+  font-family: Arial, sans-serif; /* police par dÃ©faut du site */
+  margin: 0; /* enlÃ¨ve marge automatique du navigateur */
+  padding: 0; /* enlÃ¨ve padding automatique */
 }
 
 /* ====== CURSEUR GLOBAL ====== */
@@ -10,19 +10,19 @@ html {
   cursor: none; /* cache le curseur natif partout */
 }
 
-/* curseur caché aussi sur liens et boutons */
+/* curseur cachÃ© aussi sur liens et boutons */
 a, button {
   cursor: none !important;
 }
 
 /* ====== BODY (FOND PRINCIPAL) ====== */
 body {
-  position: relative; /* permet positionnement des éléments internes */
-  margin: 0; /* enlève marge du body */
-  min-height: 100vh; /* prend toute la hauteur écran */
+  position: relative; /* permet positionnement des Ã©lÃ©ments internes */
+  margin: 0; /* enlÃ¨ve marge du body */
+  min-height: 100vh; /* prend toute la hauteur Ã©cran */
   background: #050505; /* fond noir */
-  overflow: hidden; /* empêche scroll horizontal */
-  color: #00ffcc; /* couleur texte néon */
+  overflow: hidden; /* empÃªche scroll horizontal */
+  color: #00ffcc; /* couleur texte nÃ©on */
   font-family: monospace; /* style hacker */
   z-index: 0;
   cursor: none;
@@ -33,52 +33,47 @@ body {
 /* ===== BACKGROUND GRID ===== */
 .bg-effect {
   position: fixed;
-  top: -40px; /* Commence plus haut pour cacher le bord lors de l'animation */
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: -40px; /* Plus grand pour l'animation */
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   background-color: #050505;
-  display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
-  align-content: flex-start;
-  
-  /* Mouvement vers le bas */
-  animation: gridMove 10s linear infinite;
+  pointer-events: none;
 }
 
-/* ===== LES CARRÉS INTERACTIFS ====== */
-.square {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(0, 255, 200, 0.03);
-  box-sizing: border-box;
-  
-  /* L'effet de traînée (s'estompe lentement) */
-  transition: background-color 1.5s ease, box-shadow 1.5s ease;
-}
-
-/* Carré central très brillant */
-.glow-center {
-  transition-duration: 0s; 
-  background-color: rgba(0, 255, 204, 0.8);
-  box-shadow: 0 0 20px #00ffcc;
-}
-
-/* Carrés autour (halo dynamique) */
-.glow-edge {
-  transition-duration: 0s; 
-  background-color: rgba(0, 255, 204, 0.2);
-  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
-}
-/* ====== GRILLE ANIMÉE ====== */
-body::before {
+.bg-effect::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
   background-image:
-    linear-gradient(rgba(0,255,200,0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,200,0.1) 1px, transparent 1px);
-  background-size: 40px 40px; /* taille de la grille */
-  animation: gridMove 10s linear infinite; /* mouvement continu */
+    linear-gradient(rgba(0, 255, 204, 0.15) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 255, 204, 0.15) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.32;
+}
+
+.bg-spotlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+/* ====== GRILLE ANIMÃ‰E ====== */
+body::before {
+  content: none;
 }
 
 /* ====== GLOW CENTRAL ====== */
@@ -115,7 +110,7 @@ body::before {
   display: flex; /* alignement horizontal */
   padding: 20px;
   align-items: center; /* centre vertical */
-  justify-content: space-between; /* espace entre éléments */
+  justify-content: space-between; /* espace entre Ã©lÃ©ments */
 }
 
 /* logo */
@@ -129,7 +124,7 @@ body::before {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none; /* enlève les points */
+  list-style: none; /* enlÃ¨ve les points */
   display: flex;
   gap: 25px; /* espace entre liens */
 }
@@ -147,7 +142,7 @@ ul {
 
 /* liens */
 .lien a {
-  text-decoration: none; /* enlève soulignement */
+  text-decoration: none; /* enlÃ¨ve soulignement */
   color: aliceblue;
   display: inline-block;
   transition: 0.3s; /* animation smooth */
@@ -176,7 +171,7 @@ ul {
   border: 0.1px solid #ffffff;
 }
 
-/* bouton 2 différent */
+/* bouton 2 diffÃ©rent */
 .Button2 {
   background-color: #2a3e47;
 }
@@ -222,7 +217,7 @@ main h1 {
   transform: rotateY(180deg);
 }
 
-/* faces avant/arrière */
+/* faces avant/arriÃ¨re */
 .front,
 .back {
   position: absolute;
@@ -231,7 +226,7 @@ main h1 {
   backface-visibility: hidden;
 }
 
-/* face arrière */
+/* face arriÃ¨re */
 .back {
   transform: rotateY(180deg);
 }
@@ -583,5 +578,7 @@ main h1 {
 .moncv:hover {
   transform: rotate(1.5deg);
 }
+
+
 
 
