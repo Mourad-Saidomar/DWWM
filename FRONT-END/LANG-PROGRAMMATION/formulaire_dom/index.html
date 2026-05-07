@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center p-3 bg-primary text-white">Formulaire d'inscription</h1>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="card rounded-4 shadow p-4 bg-light">
+                <form class="row">
+                    <div class="form-group col-6 mb-4">
+                        <label for="nom" class="mb-2">Nom</label>
+                        <input type="text" class="form-control rounded-5" id="nom" name="nom" placeholder="ex : Saidomar" required>
+                    </div>
+
+                    <div class="form-group col-6 mb-4">
+                        <label for="prenom" class="mb-2">Prénom</label>
+                        <input type="text" class="form-control rounded-5" id="prenom" name="prenom" placeholder="ex : Mourad" required>
+                    </div>
+
+                    <div class="form-group mb-4">                            
+                        <label for="email" class="mb-2">Email</label>
+                        <input type="email" class="form-control rounded-5 text-muted" id="email" name="email" placeholder="exemple@exemple.com" required>
+                    </div>
+
+                    <div class="form-group col-6 mb-4">
+                        <label for="password" class="mb-2">Mot de passe</label>
+                        <input type="password" class="form-control rounded-5" id="password" name="password" placeholder="Votre Mot de passe" required>
+                    </div>
+
+                    <div class="form-group col-6 mb-4">
+                        <label for="password" class="mb-2">Confirmer le Mot de passe</label>
+                        <input type="password" class="form-control rounded-5" id="confirm_password" name="password" placeholder="Confirmer" required>
+                    </div>
+
+                    <div class="form-group col-6 mb-4">
+                        <label for="age" class="mb-2">Âge</label>
+                        <input type="number" class="form-control rounded-5" id="age" name="age" placeholder="Votre âge" required>
+                    </div>
+
+                    <div class="form-group col-6 mb-4">
+                        <label for="formation" class="mb-2">Formation</label>
+                        <select class="form-control rounded-5" id="formation" name="formation" required>
+                            <option value="">Sélectionnez une formation</option
+                            <option value="dwwm">Développeur Web et Web Mobile</option>
+                            <option value="cda">Concepteur Développeur d'Applications</option>
+                            <option value="tssr">Technicien Supérieur Systèmes et Réseaux</option>
+                            <option value="design">Designer Web</option>
+                        </select>
+                    </div>
+
+                    <div class="col-3 my-3">
+                        <button id="btnInscription" class="btn btn-primary w-100 rounded-5">S'inscrire</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="validation" class="container">
+            <!-- <div class="mt-5 p-4 border rounded-4 bg-white shadow">
+                <h2 class="text-center mb-4 text-success">Inscription Valide !</h2>
+                <div class="row">
+                    <span class="col-6 p-3"><strong>Nom :</strong></span>
+                    <span class="col-6 p-3"><strong>Prenom :</strong></span>
+                    <span class="col-6 p-3"><strong>Email :</strong></span>
+                    <span class="col-6 p-3"><strong>Age :</strong></span>
+                    <span class="col-6 p-3"><strong>Formation :</strong></span>
+                </div> 
+            </div> -->
+        </div>
+    </main>
+
+    <script src="/assets/js/javascript.js"></script>
+</body>
+</html>
