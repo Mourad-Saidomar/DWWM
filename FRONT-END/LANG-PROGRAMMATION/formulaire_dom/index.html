@@ -15,34 +15,40 @@
         <div class="container mt-5">
             <div class="card rounded-4 shadow p-4 bg-light">
                 <form class="row">
-                    <div class="form-group col-6 mb-4">
+                    <div class="form-group col-6 mb-3">
                         <label for="nom" class="mb-2">Nom</label>
                         <input type="text" class="form-control rounded-5" id="nom" name="nom" placeholder="ex : Saidomar" required>
+                        <p class="invalid-feedback ms-3">Veuiller entrer votre nom</p>
                     </div>
 
-                    <div class="form-group col-6 mb-4">
+                    <div class="form-group col-6 mb-3">
                         <label for="prenom" class="mb-2">Prénom</label>
                         <input type="text" class="form-control rounded-5" id="prenom" name="prenom" placeholder="ex : Mourad" required>
+                        <p class="invalid-feedback ms-3">Veuiller entrer votre Prénom</p>
                     </div>
 
                     <div class="form-group mb-4">                            
                         <label for="email" class="mb-2">Email</label>
                         <input type="email" class="form-control rounded-5 text-muted" id="email" name="email" placeholder="exemple@exemple.com" required>
+                        <p class="invalid-feedback ms-3">Veuiller entrer votre Email</p>
                     </div>
 
                     <div class="form-group col-6 mb-4">
                         <label for="password" class="mb-2">Mot de passe</label>
                         <input type="password" class="form-control rounded-5" id="password" name="password" placeholder="Votre Mot de passe" required>
+                        <p class="invalid-feedback ms-3">Veuiller entrer votre Mot de passe</p>
                     </div>
 
                     <div class="form-group col-6 mb-4">
                         <label for="password" class="mb-2">Confirmer le Mot de passe</label>
-                        <input type="password" class="form-control rounded-5" id="confirm_password" name="password" placeholder="Confirmer" required>
+                        <input type="password" class="form-control rounded-5" id="confirmPassword" name="password" placeholder="Confirmer" required>
+                        <p class="invalid-feedback ms-3">Veuiller confirmer votre Mot de passe</p>
                     </div>
 
                     <div class="form-group col-6 mb-4">
                         <label for="age" class="mb-2">Âge</label>
                         <input type="number" class="form-control rounded-5" id="age" name="age" placeholder="Votre âge" required>
+                        <p class="invalid-feedback ms-3">Veuiller entrer votre âge et avoir au moins 16 ans</p>
                     </div>
 
                     <div class="form-group col-6 mb-4">
@@ -62,17 +68,17 @@
                 </form>
             </div>
         </div>
-        <div id="validation" class="container">
-            <!-- <div class="mt-5 p-4 border rounded-4 bg-white shadow">
+        <div id="validation" class="container d-none">
+            <div class="mt-5 p-4 border rounded-4 bg-white shadow">
                 <h2 class="text-center mb-4 text-success">Inscription Valide !</h2>
                 <div class="row">
-                    <span class="col-6 p-3"><strong>Nom :</strong></span>
-                    <span class="col-6 p-3"><strong>Prenom :</strong></span>
-                    <span class="col-6 p-3"><strong>Email :</strong></span>
-                    <span class="col-6 p-3"><strong>Age :</strong></span>
-                    <span class="col-6 p-3"><strong>Formation :</strong></span>
+                    <p class="col-6 p-3"><strong>Nom : </strong><span id="validNom"></span></p>
+                    <p class="col-6 p-3"><strong>Prenom : </strong><span id="validPrenom"></span></p>
+                    <p class="col-6 p-3"><strong>Email : </strong><span id="validEmail"></span></p>
+                    <p class="col-6 p-3"><strong>Age : </strong><span id="validAge"></span></p>
+                    <p class="col-6 p-3"><strong>Formation : </strong><span id="validFormation"></span></p>  
                 </div> 
-            </div> -->
+            </div>
         </div>
     </main>
 

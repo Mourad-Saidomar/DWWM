@@ -1,5 +1,5 @@
 const input = document.querySelectorAll('input');
-const nomomInput = document.getElementById('nom');
+const nomInput = document.getElementById('nom');
 const prenomInput = document.getElementById('prenom');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
@@ -8,7 +8,6 @@ const ageInput = document.getElementById('age');
 const formationInput = document.getElementById('formation');
 const btnInscription = document.getElementById('btnInscription');
 const validation = document.getElementById('validation');
-
 
 
 input.forEach(function(input) {
@@ -30,20 +29,36 @@ ageInput.addEventListener("input", function() {
     }
 });
 
+const validNom = document.getElementById('validNom');
+const validPrenom = document.getElementById('validPrenom');
+const validEmail = document.getElementById('validEmail');
+const validAge = document.getElementById('validAge');
+const validFormation = document.getElementById('validFormation');
+
 btnInscription.addEventListener("click", function(event) {
-    const valide = document.createElement('div');
-    valide.className = "mt-5 p-4 border rounded-4 bg-white shadow"
-    valide.innerHTML = `
-        <h2 class="text-center mb-4 text-success">Inscription Valide !</h2>
-        <div class="row">
-            <span class="col-6 p-3"><strong>Nom :</strong>${nomomInput.value}</span>
-            <span class="col-6 p-3"><strong>Prenom :</strong>${prenomInput.value}</span>
-            <span class="col-6 p-3"><strong>Email :</strong>${emailInput.value}</span>
-            <span class="col-6 p-3"><strong>Age :</strong>${ageInput.value}</span>
-            <span class="col-6 p-3"><strong>Formation :</strong>${formationInput.value}</span>
-        </div> 
-    `;
-    validation.appendChild(valide);
+    event.preventDefault();
+    if (nomInput.value.trim() === "" || prenomInput.value.trim() === "" || emailInput.value.trim() === "" || passwordInput.value.trim() === "" || confirmPasswordInput.value.trim() === "" || ageInput.value.trim() === "" || formationInput.value.trim() === ""){
+        alert("Veuillez remplir tous les champs");
+
+    } 
+    else if (passwordInput.value !== confirmPasswordInput.value) {
+        alert("Les mots de passe ne correspondent pas");
+    } 
+    
+    else if (ageInput.value < 16 || isNaN(ageInput.value)) {
+        alert("L'âge doit être supérieur ou égal à 16 ans");
+    
+    } 
+    
+    else {
+        validation.classList.remove("d-none");
+        validNom.textContent = nomInput.value;
+        validPrenom.textContent = prenomInput.value;
+        validEmail.textContent = emailInput.value;
+        validAge.textContent = ageInput.value;
+        validFormation.textContent = formationInput.value;
+        // validation.style.display = "block";
+    }
 });
 
 

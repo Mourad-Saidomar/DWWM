@@ -1,0 +1,24 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  font-family:Segoe UI, sans-serif;
+  color:white;
+  overflow-x:hidden;
+
+  background:
+    radial-gradient(circle at top,
+      rgba(124,58,237,0.30),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #05060a 0%,
+      #180831 50%,
+      #2948c4 100%
+    );
+}
