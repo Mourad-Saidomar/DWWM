@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Page d'accueil</title>
+</head>
+<body>
+    <header class="d-flex justify-content-center">
+        <h1 class="rounded-5 text-center bg-blur text-white p-3 mt-5">Listes des Utilisateurs</h1>
+    </header>
+    <main>
+        <div class="d-flex justify-content-center mt-2">
+            <button id="changer" class="rounded-5 text-center btn btn-modif text-white">Changer de mode</button>
+        </div>
+        <section id="table" class="container mt-4">
+            <div class="row">
+                <div  class="col-12">
+                    <div class="table-responsive rounded-4 overflow-hidden bg-blur">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="bg-blur-table text-white" scope="col">ID</th>
+                                    <th class="bg-blur-table text-white" scope="col">Nom</th>
+                                    <th class="bg-blur-table text-white" scope="col">Email</th>
+                                    <th class="bg-blur-table text-white" scope="col">Username</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listeUsers">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="erreur" class="d-none text-center mt-2 text-danger">
+                    <p>Erreur lors de la recuperation des donnees :</p>
+                    <p id="RaisonErreur"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-4">
+            <div id="card" class="d-none d-flex flex-wrap justify-content-center">
+                <!-- <div class="hover-card ">
+                    <article class="card p-3 hover-card-inner text-white border-0">
+                        <div class="card-body p-2 d-flex flex-column justify-content-center">
+                            <div class="text-center mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="90" fill="currentColor" class="bi bi-person-circle"  viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                </svg>
+                            </div>
+                            <p class="mb-2"><strong>Name:</strong> Leanne Graham</p>
+                            <p class="mb-2"><strong>Username:</strong> Bret</p>
+                            <p class="mb-2"><strong>Email:</strong> leanne@example.com</p>
+                            <p class="mb-2"><strong>Phone:</strong> 1-770-736-8031 x56442</p>
+                            <p class="mb-0"> <strong>Website:</strong>
+                                <a class="text-info text-decoration-none" href="https://hildegard.org" target="_blank" rel="noopener noreferrer">hildegard.org</a>
+                            </p>
+                        </div>
+                    </article>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script src="/assets/js/javascript.js"></script>
+    
+    <script>
+        if (sessionStorage.getItem("scroll")) {
+            window.scrollTo(0, sessionStorage.getItem("scroll"));
+        }
+
+        window.addEventListener("scroll", () => {
+            sessionStorage.setItem("scroll", window.scrollY);
+        });
+
+        // Gestion du clic pour déplacer la barre bleue dans la sidebar
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Empêche le saut de page pour la maquette
+                
+                // 1. On réinitialise tous les liens avec l'apparence "inactif"
+                sidebarLinks.forEach(l => {
+                    l.parentElement.classList.add('px-3');
+                    l.className = 'nav-link sidebar-link text-secondary fw-bold d-flex align-items-center gap-3 p-3';
+                });
+                
+                // 2. On applique l'apparence "actif" (avec barre bleue et fond clair) au lien cliqué
+                this.parentElement.classList.remove('px-3');
+                this.className = 'nav-link sidebar-link text-dark fw-bold d-flex align-items-center gap-3 border-start border-primary border-4 rounded-0 p-3 ps-4 bg-light';
+            });
+        });
+    </script>
+
+</body>
+</html>
