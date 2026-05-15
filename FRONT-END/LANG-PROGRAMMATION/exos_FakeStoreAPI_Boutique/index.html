@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <title>Store Boutique</title>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center p-5">
+      <h1 class="fw-bold rounded-5 text-center bg-blur text-white p-4">
+        Boutique
+      </h1>
+    </header>
+    <main>
+      <section class="container">
+        <h1 class="fw-bold">Nos Produits</h1>
+        <div id="barre" class="bg-white rounded mb-5"></div>
+        <div class="row d-flex justify-content-center align-items-center mb-3">
+          <button class="col-3 btn btn-modif text-white rounded-5 p-2">
+            Charger d'autres produits
+          </button>
+          <div class="col-3">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control bg-blur text-white rounded-5"
+              placeholder="Rechercher un produit..."
+            />
+          </div>
+          <div class="col-3">
+            <select id="categorySelect" class="bg-blur form-select rounded-5">
+              <option value="" disabled selected hidden>
+                Toutes les catégories
+              </option>
+              <option value="electronics">Électronique</option>
+              <option value="jewelery">Bijoux</option>
+              <option value="men's clothing">Vêtements Homme</option>
+              <option value="women's clothing">Vêtements Femme</option>
+            </select>
+          </div>
+        </div>
+        <div class="row bg-blur rounded-5 py-4 d-flex align-items-center">
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <div id="circle" class="rounded-circle bg-primary fs-1 me-3">
+              <i class="bi bi-box m-3"></i>
+            </div>
+
+            <div>
+              <h4>Nombre de produits</h4>
+              <div class="fw-bold fs-5">Nombre</div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <div class="fs-1 me-3"><i class="bi bi-tag"></i></div>
+            <div>
+              <h4>Catégories disponibles</h4>
+              <div class="fw-bold fs-5">Nombre</div>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <div class="fs-1 me-3"><i class="bi bi-cart3"></i></div>
+            <div>
+              <h4>Produits affichés</h4>
+              <div class="fw-bold fs-5">Nombre</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/assets/js/javascript.js"></script>
+
+    <script>
+      if (sessionStorage.getItem("scroll")) {
+        window.scrollTo(0, sessionStorage.getItem("scroll"));
+      }
+
+      window.addEventListener("scroll", () => {
+        sessionStorage.setItem("scroll", window.scrollY);
+      });
+
+      // Gestion du clic pour déplacer la barre bleue dans la sidebar
+      const sidebarLinks = document.querySelectorAll(".sidebar-link");
+
+      sidebarLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault(); // Empêche le saut de page pour la maquette
+
+          // 1. On réinitialise tous les liens avec l'apparence "inactif"
+          sidebarLinks.forEach((l) => {
+            l.parentElement.classList.add("px-3");
+            l.className =
+              "nav-link sidebar-link text-secondary fw-bold d-flex align-items-center gap-3 p-3";
+          });
+
+          // 2. On applique l'apparence "actif" (avec barre bleue et fond clair) au lien cliqué
+          this.parentElement.classList.remove("px-3");
+          this.className =
+            "nav-link sidebar-link text-dark fw-bold d-flex align-items-center gap-3 border-start border-primary border-4 rounded-0 p-3 ps-4 bg-light";
+        });
+      });
+    </script>
+  </body>
+</html>
