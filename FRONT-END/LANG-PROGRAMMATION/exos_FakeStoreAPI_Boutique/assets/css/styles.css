@@ -27,12 +27,12 @@ input::placeholder {
   color: white !important;
 }
 
-select.form-select:has(option[value=""]:checked) {
-  color: white;
+select.form-select:has(option[value]:checked) {
+  color: white !important;
 }
 
 select.form-select option {
-  background-color: #230c47 !important;
+  background-color: rgba(35, 12, 71, 0.9098039216) !important;
 }
 
 #barre {
@@ -51,4 +51,45 @@ select.form-select option {
 #circle {
   width: 70px;
   height: 70px;
+}
+
+.circle-icon {
+  width: 56px;
+  height: 56px;
+}
+
+#listeProduits .card-img-top {
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#listeProduits .card-img-top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bs-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bs-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(108, 99, 255, 0.15) !important;
+}
+
+.bs-card:hover .card-title {
+  color: #6c63ff !important;
+}
+
+.bs-card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.card-img-top {
+  transition: transform 0.3s ease;
 }/*# sourceMappingURL=styles.css.map */
