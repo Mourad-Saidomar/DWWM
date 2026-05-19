@@ -77,10 +77,11 @@ function afficherProchainLot() {
     }
 
     indexAffichage += prochainsProduits.length;
-    nbProduitsAffiches.textContent = prochainsProduits.length;
+    nbProduitsAffiches.textContent = produitsFiltres.length;
 
     if (indexAffichage >= produitsFiltres.length) {
         btnCharger.disabled = true;
+        btnCharger.classList.toggle("cursor-not-allowed");
     } else {
         btnCharger.disabled = false;
     }

@@ -1,4 +1,4 @@
-class Produit{
+export class Produit{
     constructor(nom, categorie, prix, stock) {
         this.nom = nom;
         this.categorie = categorie;
@@ -44,8 +44,6 @@ class Produit{
 
 }
 
-const Produit1 = new Produit("Ordinateur", "Informatique", 1200, 5);
 
-Produit1.DisplayProduct();
 
 

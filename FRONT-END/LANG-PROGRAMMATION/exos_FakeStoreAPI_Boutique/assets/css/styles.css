@@ -92,4 +92,10 @@ select.form-select option {
 
 .card-img-top {
   transition: transform 0.3s ease;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+/*# sourceMappingURL=styles.css.map */
