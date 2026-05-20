@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Page d'accueil</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+
+    <div id="app" class="container">
+        <h1 :class="couleur" class="row d-flex justify-content-center my-5 fw-bold">
+            Hello World!
+        </h1>
+
+        <div class="row d-flex justify-content-center my-2">
+            <div class="col-6">
+                <input class="form-control" type="text" v-model="image">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center my-5">
+            <img class="rounded-5 col-7" :src="image" alt="image">
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <button @click="visible = !visible" class="col-3 btn btn-primary ">Bouton</button>
+            <h1 v-if="visible" class="row d-flex justify-content-center my-5 fw-bold">
+                Texte à afficher
+            </h1>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-3">
+                <input class="form-control" type="number" v-model="age">
+            </div>
+            <div class="col-3">
+                <p v-if="age >= 18">
+                    Tu es majeur
+                </p>
+                <p v-else>
+                    Tu es mineur
+                </p>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <ul>
+                <li v-for="fruit in fruits" :key="fruit">{{fruit}}</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    
+
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/assets/js/javascript.js"></script>
+</body>
+</html>

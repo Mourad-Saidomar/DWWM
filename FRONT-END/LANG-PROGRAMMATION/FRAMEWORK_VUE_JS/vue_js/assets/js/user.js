@@ -5,7 +5,7 @@ export class User {
         this.fonction = fonction;
         this.tel = tel;
         this.email = email;
-    }
+    }  
 
     Afficher() {
         console.log(`Nom: ${this.nom}, Prénom: ${this.prenom}, Fonction: ${this.fonction}, Tel: ${this.tel}, Email: ${this.email}`);
