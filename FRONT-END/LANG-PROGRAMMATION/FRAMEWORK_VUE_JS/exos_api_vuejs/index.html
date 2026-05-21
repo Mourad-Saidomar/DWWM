@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Liste des utilisateurs</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <header class="d-flex justify-content-center">
+        <h1 class="rounded-5 text-center bg-blur text-white p-4 mt-5">Listes des Utilisateurs</h1>
+    </header>
+    <main id="app">
+        <div class="d-flex justify-content-center mt-2">
+            <button @click="visible = !visible" id="changer" class="rounded-5 text-center btn btn-modif text-white">Changer de mode</button>
+        </div>
+        <section v-if="visible" id="table" class="container mt-4">
+            <div class="row">
+                <div  class="col-12">
+                    <div class="table-responsive rounded-4 overflow-hidden bg-blur">
+                        <table class="table table-ped table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="bg-blur-table text-white" scope="col">ID</th>
+                                    <th class="bg-blur-table text-white" scope="col">Nom</th>
+                                    <th class="bg-blur-table text-white" scope="col">Email</th>
+                                    <th class="bg-blur-table text-white" scope="col">Username</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listeUsers">
+                                <tr v-for="user in users" :key="user.id">
+                                    <th class="bg-blur text-white" scope="row">{{ user.id }}</th>
+                                    <td class="bg-blur text-white">{{ user.name }}</td>
+                                    <td class="bg-blur text-white">{{ user.email }}</td>
+                                    <td class="bg-blur text-white">{{ user.username }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="erreur" class="d-none text-center mt-2 text-danger">
+                    <p>Erreur lors de la recuperation des donnees :</p>
+                    <p id="RaisonErreur"></p>
+                </div>
+            </div>
+        </section>
+
+        <section v-else class="container my-4">
+            <div v-for="user in users" :key="user.id" id="card" >
+                <div class="">
+                    <article class="hover-card rounded-4 card h-100 border-0">
+                        <div class="p-3 bg-1 rounded-4 hover-card-inner text-white h-100">
+                            <div class="card-body p-2">
+                                <div class="d-flex bg-blur-card p-3 rounded-pill align-items-center mb-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="90" fill="currentColor" class="bi bi-person-circle"  viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                    </svg>
+                                    <p class="mb-2 ms-3 text-white col-5 overflow-hidden"><span class="text-white fw-bold fs-4">Bienvenue</span><br><strong class="d-block" title="{{ user.name }}">{{ user.name }}</strong></p>
+                                </div>
+                                <div class="row ms-2">
+                                    <p class="mb-2 small text-white col-6 overflow-hidden"><span class="text-white text-decoration-underline">Email</span><br><strong class="d-block" title="{{ user.email }}">{{ user.email }}</strong></p>
+                                    <p class="mb-2 small text-white col-6 overflow-hidden"><span class="text-white text-decoration-underline">Username</span><br><strong class="d-block" title="{{ user.username }}">{{ user.username }}</strong></p>
+                                    <p class="mb-2 small text-white col-6 overflow-hidden"><span class="text-white text-decoration-underline">Phone</span><br><strong class="d-block" title="{{user.phone}}">{{user.phone}}</strong></p>
+                                    <p class="mb-0 small text-white col-6 overflow-hidden"><span class="text-white text-decoration-underline">Website</span><br>
+                                        <a href="https://{{user.website}}" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-white d-block" title="{{user.website}}">{{user.website}}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script type="module" src="/assets/js/javascript.js"></script>
+</body>
+</html>
